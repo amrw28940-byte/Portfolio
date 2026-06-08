@@ -20,7 +20,7 @@ export default function Portfolio() {
     {
       title: "صفحة هبوط كريم محيط العين (Eye Contour Cream)",
       description: "تصميم صفحة الهبوط بالكامل، وتوليد وتصميم الصور البصرية الجذابة وكتابة المحتوى التسويقي المقنع لزيادة معدل التحويل والمبيعات.",
-      image: "Screenshot.png", // صورة احترافية لمنتجات العناية بالبشرة والكريمات
+      image: "https://images.unsplash.com/photo-1608248597481-496100c80836?auto=format&fit=crop&w=600&q=80", // الصورة المحدثة والمناسبة للبشرة
       link: "https://artistic-touch1.myeasyorders.com/products/Eye-Contour-Cream",
       type: "صفحة هبوط مبيعات",
     },
@@ -57,7 +57,7 @@ export default function Portfolio() {
       type: "صناعة سكريبت وفيديو AI",
     },
     {
-      title: "فيديو ثقافي  (YouTube)",
+      title: "فيديو موشن  (YouTube)",
       description: "صياغة السكريبت التسويقي والقصصي للفيديو بهدف شد انتباه المشاهد من الثواني الأولى وتحقيق أعلى نسب تفاعل.",
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80",
       link: "https://www.youtube.com/watch?v=ZjW6mpw8NQk",
@@ -205,8 +205,9 @@ export default function Portfolio() {
             <h2 className="text-3xl md:text-4xl font-black mb-6">
               لماذا توظيف خدماتي يمنحك الأفضلية؟
             </h2>
+            {/* الفقرة المحدثة بالكامل بناءً على طلبك الإحترافي */}
             <p className="leading-relaxed mb-6 font-bold text-slate-900">
-              أنا لا أقوم بمجرد برمجة صفحات؛ بل أصنع منظومة رقمية متكاملة. فهمي العميق لـ <span className="text-emerald-950 font-black">SEO</span> مدمجاً بمهاراتي التقنية في <span className="font-black">Next.js</span> يضمن لك موقعاً فائق السرعة، ومؤرشفاً بشكل مثالي في الصفحات الأولى لمحركات البحث، مع محتوى تسويقي مدروس يحول الزوار إلى عملاء دائمين.
+              أنا لا أقوم بمجرد تصميم الصفحات بل أصنع منظومات رقمية متكاملة أدمج مهاراتي التقنية في تطوير المواقع مع فهمي العميق لقواعد تهيئة محركات البحث لأضمن لك موقعاً فائق السرعة ومؤرشفاً بشكل مثالي في صدارة نتائج البحث، ومدعوماً بمحتوى تسويقي مدروس يحول الزوار إلى عملاء دائمين.
             </p>
             <div className="grid grid-cols-2 gap-4 text-sm font-black text-slate-950">
               <div className="flex items-center gap-2">
