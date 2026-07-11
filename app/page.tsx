@@ -121,7 +121,7 @@ export default function Home() {
     
     { title: "موقع hmunzilike العقاري والخدمي", type: "wordpress", url: "https://munzilike.com/", desc: "تطوير القالب وإدارة هيكلة وتنسيق البيانات بالكامل" },
     { title: "موقع cobra plast للصناعات البلاستيكية", type: "wordpress", url: "https://cobra-plast.com/", desc: "تصميم وإعداد الهوية الرقمية والصفحات على الووردبريس" },
-    { title: "موقع travel friend للسياحة والسفر", type: "wordpress", url: "#", desc: "تصميم وتنسيق بنية الموقع المخصصة على ووردبريس (بدون رابط حي)" },
+    { title: "موقع travel friend للسياحة والسفر", type: "wordpress", url: "https://travelfriend-ag.com/", desc: "تصميم وتنسيق بنية الموقع المخصصة على ووردبريس (بدون رابط حي)" },
 
     { title: "صفحة هبوط منتج Eye Contour Cream", type: "landing", url: "https://artistic-touch1.myeasyorders.com/products/Eye-Contour-Cream", desc: "صفحة مبيعات لمنتج طبي مبنية على Easy Orders لرفع التحويل" },
     { title: "صفحة هبوط منتج Puvograbi Lip Serum", type: "landing", url: "https://artistic-touch1.myeasyorders.com/products/Puvograbi-Lip-Serum", desc: "تصميم واجهة تسويقية جذابة لمنتج تجميلي طبي معاصر" },
@@ -214,7 +214,7 @@ export default function Home() {
 
         <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white mb-4">عمرو محمد السيد</h1>
         <h2 className="text-xl md:text-2xl font-bold text-gray-200 mb-2">تطوير الويب المتكامل وإستراتيجيات الـ SEO</h2>
-        <p className="text-md md:text-lg font-medium text-amber-400 mb-8">خبير 9 سنوات في بناء المواقع وتصدر النتائج</p>
+        <p className="text-md md:text-lg font-medium text-amber-400 mb-8">خبرة 11 سنة في بناء المواقع وتصدر النتائج</p>
         
         <div 
           className="w-full max-w-3xl p-6 md:p-8 rounded-2xl shadow-2xl backdrop-blur-md text-center mb-10"
@@ -226,7 +226,7 @@ export default function Home() {
           }}
         >
           <p className="text-base md:text-lg text-gray-100 leading-relaxed relative z-10">
-            العمل على بناء المواقع الإلكترونية بداية من شراء الدومين وحجز الاستضافة وتركيب القالب وتقسيم الموقع وعمل الصفحات الهامة مثل (اتصل بنا)، وإدارة المحتوى والتنسيق، وتحسين الموقع لمحركات البحث وغيرها من العمليات الهامة التي تحسن من الموقع الإلكتروني لتضعه في النتائج الأولى في محركات البحث.
+            متخصص في تطوير وبناء المواقع الإلكترونية المتقدمة باستخدام Next.js فائقة السرعة ومنصة WordPress المرنة. تشمل خدماتي الرحلة كاملةً بدءاً من حجز الاستضافة وشراء الدومين، مروراً بتصميم وتركيب القوالب وتخصيص الهيكلية والصفحات الأساسية، وصولاً إلى إدارة وتنسيق المحتوى الرقمي وتطبيق إستراتيجيات السيو (SEO) الصارمة لتهيئة موقعك وتصدره النتائج الأولى في محركات البحث.
           </p>
           <div style={{
             position: "absolute",
