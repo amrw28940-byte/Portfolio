@@ -82,7 +82,6 @@ function MatrixRainBackground() {
 // 2. الصفحة الرئيسية الكاملة
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [showCV, setShowCV] = useState(false);
   const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
@@ -112,8 +111,17 @@ export default function Home() {
     { id: "social_script", label: "🎬 سوشيال ميديا وسكريبتات" }
   ];
 
-  // داتا المشاريع كاملة
+  // داتا المشاريع كاملة (متضمنة المشاريع الجديدة والسابقة)
   const projectsData = [
+    // المشاريع الـ 6 الجديدة
+    { title: "موقع مكافحة الحشرات بالسعودية", type: "nextjs", url: "https://pest-control-sa.vercel.app/", desc: "منصة خدمية سريعة مبنية بـ Next.js ومحسنة لمحركات البحث" },
+    { title: "معرض أعمال أحمد عبد الرحمن", type: "nextjs", url: "https://ahmed-abdul-rahman.vercel.app/", desc: "موقع شخصي وتصاميم واجهات رقمية متطورة بـ Next.js" },
+    { title: "منصة A00D الرقمية", type: "nextjs", url: "https://a00d.com/", desc: "موقع تجاري وبرمجي بأداء عالي وتجربة مستخدم مميزة" },
+    { title: "موقع The Light House (EN)", type: "nextjs", url: "https://the-light-house-kappa.vercel.app/en", desc: "منصة تفاعلية متعددة اللغات ومطورة بأحدث معايير الويب" },
+    { title: "صفحة هبوط Pure Husk Gold", type: "landing", url: "https://purehuskgold.myeasyorders.com/", desc: "صفحة مبيعات وتسويق إلكتروني مبنية على Easy Orders لرفع معدلات التحويل" },
+    { title: "موقع مدادك للخدمات الرقمية", type: "nextjs", url: "https://mdadak.com/", desc: "منصة متكاملة للخدمات الرقمية وصناعة المحتوى" },
+
+    // المشاريع السابقة
     { title: "موقع وكالة يونيك الرقمية (Unique WS)", type: "nextjs", url: "https://www.uniquee-ws.com/", desc: "منصة برمجية متكاملة للوكالة مبنية باستخدام Next.js" },
     { title: "موقع gieotic الإلكتروني", type: "nextjs", url: "https://gieotic.vercel.app/", desc: "مشروع ريادي سريع الأداء ومحسن على Vercel" },
     { title: "موقع techmotivations للمحتوى والتكنولوجيا", type: "nextjs", url: "https://techmotivations.com/ar/", desc: "إستراتيجية وتهيئة سيو كاملة وتصدر نتائج البحث" },
@@ -200,7 +208,7 @@ export default function Home() {
           <div className="absolute w-[136px] h-[136px] rounded-full bg-gradient-to-b from-[#1a3875] to-[#0c1a3a] overflow-hidden border border-white/5" />
           <div className="absolute inset-0 w-full h-full overflow-visible flex items-end justify-center">
             <img 
-              src="/amrr.webp" 
+              src="/amrrr.webp" 
               alt="عمرو محمد السيد" 
               className="w-auto h-[115%] object-contain max-w-none mb-[2px] transition-transform duration-300 group-hover:scale-105"
               style={{
@@ -240,7 +248,8 @@ export default function Home() {
           }} />
         </div>
 
-        <div className="flex flex-wrap gap-5 justify-center w-full max-w-xl mb-12">
+        {/* أزرار التواصل وسير العمل (متضمنة زري عرض وتحميل الـ PDF) */}
+        <div className="flex flex-wrap gap-4 justify-center w-full max-w-3xl mb-12">
           <a 
             href="https://wa.me/201020347946" target="_blank" rel="noopener noreferrer"
             className="flex-1 min-w-[200px] px-6 py-4 bg-transparent text-emerald-400 font-extrabold rounded-xl hover:bg-emerald-500/10 transition duration-300 backdrop-blur-sm flex items-center justify-center gap-2"
@@ -253,13 +262,26 @@ export default function Home() {
             <span>💬</span> تواصل عبر واتساب فوراً
           </a>
 
-          <button 
-            onClick={() => setShowCV(true)}
-            className="flex-1 min-w-[200px] px-6 py-4 bg-white text-black font-extrabold rounded-xl transition duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
+          {/* زر عرض السيرة الذاتية PDF في نافذة جديدة */}
+          <a 
+            href="/Amr%20Elsayed.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex-1 min-w-[180px] px-5 py-4 bg-white text-black font-extrabold rounded-xl transition duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
             style={{ boxShadow: "0 0 20px rgba(212, 163, 89, 0.4), 0 4px 15px rgba(255,255,255,0.3)" }}
           >
-            📄 عرض السيرة الذاتية (CV)
-          </button>
+            <span>📄</span> عرض الـ CV
+          </a>
+
+          {/* زر تحميل السيرة الذاتية PDF مباشرة */}
+          <a 
+            href="/Amr%20Elsayed.pdf" 
+            download="Amr_Elsayed_CV.pdf"
+            className="flex-1 min-w-[180px] px-5 py-4 bg-amber-500 text-slate-950 font-extrabold rounded-xl transition duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 hover:bg-amber-400"
+            style={{ boxShadow: "0 0 20px rgba(212, 163, 89, 0.4)" }}
+          >
+            <span>📥</span> تحميل الـ CV
+          </a>
         </div>
       </div>
 
@@ -387,7 +409,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* شبكة الكروت الذهبية بالكامل ميتاليك */}
+        {/* شبكة الكروت الذهبية */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {seoTools.map((tool, index) => (
             <div
@@ -416,7 +438,7 @@ export default function Home() {
 
       </section>
 
-      {/* ==================== الـ SECTION الخامس والأخير: تواصل معي الآن (مطابق للصورة تماماً) ==================== */}
+      {/* ==================== الـ SECTION الخامس والأخير: تواصل معي الآن ==================== */}
       <section style={{ zIndex: 30 }} className="relative max-w-6xl mx-auto px-4 pb-28">
         <div 
           className="w-full py-12 px-6 rounded-2xl flex flex-col items-center justify-center text-center bg-[#051129]/90 backdrop-blur-md"
@@ -425,7 +447,6 @@ export default function Home() {
             boxShadow: "0 0 20px rgba(0, 255, 204, 0.25), inset 0 0 15px rgba(0, 255, 204, 0.05)"
           }}
         >
-          {/* عنوان مشع نيون سماوي كما بالصورة */}
           <h2 
             className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-wide"
             style={{
@@ -435,10 +456,8 @@ export default function Home() {
             تواصل معي الآن
           </h2>
 
-          {/* أزرار التواصل الموزعة بشكل مرن ومتجاوب */}
           <div className="flex flex-wrap items-center justify-center gap-4 w-full max-w-4xl">
             
-            {/* زر فيسبوك */}
             <a 
               href="https://www.facebook.com/" 
               target="_blank" 
@@ -448,7 +467,6 @@ export default function Home() {
               Facebook Profile 👤
             </a>
 
-            {/* زر واتساب الرئيسي والأخضر البارز */}
             <a 
               href="https://wa.me/201020347946" 
               target="_blank" 
@@ -458,7 +476,6 @@ export default function Home() {
               WhatsApp 💬
             </a>
 
-            {/* زر البريد الإلكتروني */}
             <a 
               href="mailto:amrw28940@gmail.com"
               className="px-6 py-3 bg-[#0d1933] text-sm md:text-base text-gray-200 font-semibold rounded-xl border border-slate-700/60 hover:bg-[#122247] hover:text-white transition duration-200 flex items-center justify-center gap-2"
@@ -469,27 +486,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* الـ Modal المنبثق لعرض الـ CV عند النقر */}
-      {showCV && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md" onClick={() => setShowCV(false)}>
-          <div 
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#0f244d] p-2 rounded-2xl border overflow-y-auto"
-            style={{ 
-              background: "linear-gradient(#0f244d, #0f244d) padding-box, linear-gradient(135deg, #ffd700, #aa7c11) border-box",
-              border: "3px solid transparent",
-              boxShadow: "0 0 40px rgba(212, 163, 89, 0.5)"
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button onClick={() => setShowCV(false)} className="absolute top-4 left-4 z-50 bg-red-600 hover:bg-red-700 text-white font-bold w-10 h-10 rounded-full flex items-center justify-center transition">✕</button>
-            <img 
-              src="/arbic.webp" alt="السيرة الذاتية" className="w-full h-auto rounded-xl shadow-2xl"
-              onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/800x1200?text=CV+Image+Placeholder"; }}
-            />
-          </div>
-        </div>
-      )}
 
     </main>
   );
